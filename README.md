@@ -3,3 +3,6 @@
 
 ## Diagrama de casos de uso
 ![Diagrama](docs/diagrama-cdu/diagrama-cdu.png)
+
+## Diagrama de classes
+![Diagrama de classes](docs/diagrama-classes/diagrama-classes.png)
