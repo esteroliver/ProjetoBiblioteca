@@ -1,0 +1,22 @@
+{
+  "name": "projetobiblioteca",
+  "version": "1.0.0",
+  "description": "![](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esteroliver/ProjetoBiblioteca.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esteroliver/ProjetoBiblioteca/issues"
+  },
+  "homepage": "https://github.com/esteroliver/ProjetoBiblioteca#readme"
+}
