@@ -10,6 +10,8 @@ import com.jambodev.biblioteca.entities.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 
-    public Optional<Usuario> findByNome(String nome);
+    public Optional<Usuario> findByNome_usuario(String nome_usuario);
+
+    public Optional<Usuario> findByEmail(String email);
     
 }

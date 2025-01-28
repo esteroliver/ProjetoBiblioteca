@@ -12,8 +12,8 @@ public class UsuarioService{
     @Autowired
     UsuarioRepository ur;
 
-    public Usuario cadastro(String nome, String email, String senha, String localizacao) {
-        return ur.save(new Usuario(nome, email, senha, localizacao));
+    public Usuario cadastro(String nome, String email, String senha, String localizacao, String nome_usuario) {
+        return ur.save(new Usuario(nome, email, senha, localizacao, nome_usuario));
     }
 
     public void login(String email, String senha) throws Exception {
@@ -25,7 +25,7 @@ public class UsuarioService{
     }
 
     public Usuario Perfil(String username) throws Exception {
-        var opt = ur.findByNome(username);
+        var opt = ur.findByNome_usuario(username);
         if (opt.isEmpty()) throw new Exception("Usuario nao encontrado");
          
         return opt.get();
