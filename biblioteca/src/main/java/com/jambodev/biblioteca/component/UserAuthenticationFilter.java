@@ -4,11 +4,15 @@ import java.io.IOException;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.neo4j.Neo4jProperties.Authentication;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.jambodev.biblioteca.configuration.SecurityConfiguration;
+import com.jambodev.biblioteca.entities.Usuario;
 import com.jambodev.biblioteca.jwt.JwtTokenService;
 import com.jambodev.biblioteca.repositories.UsuarioRepository;
+import com.jambodev.biblioteca.user_details.UsuarioDetails;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -41,7 +45,9 @@ public class UserAuthenticationFilter extends OncePerRequestFilter {
         if (checkIfEndpointIsNotPublic(request)) {
             String token = recoveryToken(request);
             if (token != null) {
-                // TO DO
+                String conteudo = jwt_ts.getSubjectFromToken(token);
+                Usuario usuario = ur.findByNome_usuario(conteudo).get();
+                UsuarioDetails usuario_details = new UsuarioDetails(usuario);
             }
         }
     }
