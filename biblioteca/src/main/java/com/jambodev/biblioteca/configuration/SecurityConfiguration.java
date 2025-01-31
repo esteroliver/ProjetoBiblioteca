@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 public class SecurityConfiguration {
     public static final String [] ENDPOINTS_WITH_AUTHENTICATION_NOT_REQUIRED = {
         "/usuarios/login", //url que usaremos para fazer login
-        "/usuarios" //url que usaremos para criar um usuário
+        "/usuarios", //url que usaremos para criar um usuário
+        "/" //landing page
     };
 }
