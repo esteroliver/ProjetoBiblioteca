@@ -6,7 +6,7 @@
 
 ## Metas
 
-- [ ] CRUD das entidades
+- [x] CRUD das entidades
 - [ ] Autenticação de usuário
 
 ## Diagrama de casos de uso
