@@ -1,2 +1,3 @@
-ng g c "componente" --> gerar novo componente
+ng g c componente --> gerar um novo componente
 ng serve --> rodar aplicação
+ng g s servico --> gerar um novo serviço
