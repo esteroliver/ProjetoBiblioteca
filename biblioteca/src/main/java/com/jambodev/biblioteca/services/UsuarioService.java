@@ -12,8 +12,8 @@ public class UsuarioService{
     @Autowired
     UsuarioRepository ur;
 
-    public Usuario cadastro(String nome, String email, String senha, String localizacao, String nome_usuario) {
-        return ur.save(new Usuario(nome, email, senha, localizacao, nome_usuario));
+    public Usuario cadastro(String nome, String email, String senha, String nome_usuario) {
+        return ur.save(new Usuario(nome, email, senha, nome_usuario));
     }
 
     public void login(String email, String senha) throws Exception {
