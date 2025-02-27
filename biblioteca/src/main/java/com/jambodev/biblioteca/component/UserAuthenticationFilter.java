@@ -4,8 +4,9 @@ import java.io.IOException;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.neo4j.Neo4jProperties.Authentication;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.jambodev.biblioteca.configuration.SecurityConfiguration;
@@ -48,6 +49,13 @@ public class UserAuthenticationFilter extends OncePerRequestFilter {
                 String conteudo = jwt_ts.getSubjectFromToken(token);
                 Usuario usuario = ur.findByNome_usuario(conteudo).get();
                 UsuarioDetails usuario_details = new UsuarioDetails(usuario);
+
+                Authentication authentication = new UsernamePasswordAuthenticationToken(usuario_details.getUsername(), null, usuario_details.getAuthorities());
+
+                SecurityContextHolder.getContext().setAuthentication((org.springframework.security.core.Authentication) authentication);
+            }
+            else{
+                throw new RuntimeException("Token inválido");
             }
         }
     }
