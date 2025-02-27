@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { LoginComponent } from './components/login/login.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { EstanteComponent } from './components/estante/estante.component';
 
 export const routes: Routes = [
     {
@@ -16,6 +17,10 @@ export const routes: Routes = [
     {
         path: 'cadastro',
         component: CadastroComponent
+    },
+    {
+        path:'livros',
+        component: EstanteComponent
     }
 ];
 

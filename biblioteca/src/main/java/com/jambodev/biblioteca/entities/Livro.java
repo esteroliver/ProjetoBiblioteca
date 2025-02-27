@@ -14,6 +14,7 @@ public class Livro {
     
     private String titulo;
     private String autor;
+    private Integer ano;
     private String capa;
     private boolean disponivel;
 

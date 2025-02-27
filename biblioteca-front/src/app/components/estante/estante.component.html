@@ -1,19 +1,35 @@
 <div class="estante-main">
-    <h1>Adicionar livro</h1>
-    <label>
-        Título
-        <input type="text" pInputText />
-    </label>
+    <div class="add-livro">
+        <h1>Adicionar livro</h1>
+        <label>
+            Título
+            <input type="text" pInputText [(ngModel)]="titulo"/>
+        </label>
 
-    <label>
-        Autor
-        <input type="text" pInputText />
-    </label>
+        <label>
+            Autor
+            <input type="text" pInputText [(ngModel)]="autor"/>
+        </label>
 
-    <label>
-        Ano
-        <p-inputnumber inputId="integeronly" />
-    </label>
+        <label>
+            Ano
+            <p-inputnumber inputId="integeronly" [(ngModel)]="ano"/>
+        </label>
 
-    <p-button label="Adicionar" />
+        <label>
+            Capa
+            <input type="text" pInputText [(ngModel)]="capa"/>
+        </label>
+
+        <p-button label="Adicionar" (onClick)="adicionarLivro()" />
+    </div>
+
+    <div class="listar-livros">
+        <ul>
+            <li *ngFor="let livro of livros">
+                {{livro.titulo}} - {{livro.autor}} - {{livro.ano}}
+                <button (onClick)="removerLivro(livro.titulo)">Remover</button>
+            </li>
+        </ul>
+    </div>
 </div>
