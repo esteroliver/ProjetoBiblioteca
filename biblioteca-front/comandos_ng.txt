@@ -1,0 +1,2 @@
+ng g c "componente" --> gerar novo componente
+ng serve --> rodar aplicação
