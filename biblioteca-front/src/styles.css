@@ -5,4 +5,6 @@
 :root{
     --quicksand: "Quicksand", sans-serif;
     --cinza: rgb(81, 81, 81);
+    --border: 2px solid var(--cinza);
+    --border-radius: 10px;
 }

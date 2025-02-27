@@ -1,0 +1,18 @@
+.add-livro{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--quicksand);
+    align-items: center;
+    width: 25rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+}
+
+.add-livro label{
+    margin: 0.5rem;
+}
+
+.add-livro p-button{
+    margin: 1rem;
+}
