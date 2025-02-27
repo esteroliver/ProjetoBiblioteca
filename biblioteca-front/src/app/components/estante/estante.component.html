@@ -27,8 +27,12 @@
     <div class="listar-livros">
         <ul>
             <li *ngFor="let livro of livros">
-                {{livro.titulo}} - {{livro.autor}} - {{livro.ano}}
-                <button (onClick)="removerLivro(livro.titulo)">Remover</button>
+                <img src="{{livro.capa}}" alt="">
+                <div class="livro-info">
+                    <h3>{{livro.titulo}} - {{livro.autor}}</h3>
+                    <h4>{{livro.ano}}</h4>
+                    <p-button label="Remover" (onClick)="removerLivro(livro.titulo)" severity="danger" icon="pi pi-trash"/>
+                </div>
             </li>
         </ul>
     </div>

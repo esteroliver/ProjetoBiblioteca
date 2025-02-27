@@ -1,3 +1,7 @@
+.estante-main{
+    display: flex;
+}
+
 .add-livro{
     display: flex;
     flex-direction: column;
@@ -7,6 +11,7 @@
     border: var(--border);
     border-radius: var(--border-radius);
     padding: 1rem;
+    height: 27rem;
 }
 
 .add-livro label{
@@ -16,3 +21,24 @@
 .add-livro p-button{
     margin: 1rem;
 }
+
+.listar-livros ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listar-livros li{
+    display: flex;
+    font-family: var(--quicksand);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin: 1rem;
+}
+
+.listar-livros li img{
+    height: 200px;
+    margin-right: 1rem;
+}
+
